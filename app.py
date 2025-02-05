@@ -43,5 +43,9 @@ def chat():
 
     return Response(stream_with_context(generate()), mimetype='text/event-stream')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    # Get port from environment variable for Render
+    port = int(os.getenv('PORT', 5000))
+
+    # Run the app
+    app.run(host='0.0.0.0', port=port)
