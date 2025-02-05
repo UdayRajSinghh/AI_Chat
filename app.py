@@ -12,7 +12,7 @@ CORS(app)  # Enable CORS for all routes
 
 # Initialize Groq client
 client = Groq(
-    api_key="os.getenv('GROQ_API_KEY')"  # Store your API key in .env file
+    api_key=os.getenv('GROQ_API_KEY') # Store your API key in .env file
 )
 
 @app.route('/')
